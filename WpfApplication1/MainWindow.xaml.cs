@@ -15,14 +15,12 @@ using System.Text.RegularExpressions;
 
 namespace Kalkulator
 {
-    /// <summary>
-    /// //Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
-        liczenie liczenie = new liczenie();//tworzymy objekt klasy liczenie
+        liczenie liczenie = new liczenie();
         bool gdzieWpisać = true;
-        bool czyWyczyścićPasekWyniku = false;//jeśli jest równe true, to przy wpisaniu liczby pasek wyniku zostanie wyczyszczony
+        bool czyWyczyścićPasekWyniku = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -49,7 +47,7 @@ namespace Kalkulator
         private void działanie_Click(object sender, RoutedEventArgs e)
         {
             liczenie.działanie = (sender as Button).Content.ToString()[0];
-            czyWyczyścićPasekWyniku = true;//czyścimy pasek tekstowy
+            czyWyczyścićPasekWyniku = true;
             gdzieWpisać = false;
         }
 
@@ -57,7 +55,7 @@ namespace Kalkulator
         {
             gdzieWpisać = true;
             liczenie.a = liczenie.licz();
-            pasekWyniku.Text = liczenie.a.ToString();//wyświetlamy wynik
+            pasekWyniku.Text = liczenie.a.ToString();
             czyWyczyścićPasekWyniku = true;
         }
 
@@ -72,10 +70,10 @@ namespace Kalkulator
                 else
                     liczenie.b = double.Parse(pasekWyniku.Text);
             }
-            catch (FormatException)//jeśli wprowadzono błędnie liczbę wykonuje poniższy kod
+            catch (FormatException)
             {
                 if (pasekWyniku.Text != "")
-                    MessageBox.Show("Nie wpisano prawidłowo liczby", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);//komunikat o błędzie, ale tylko, jeśli pole nie jest puste
+                    MessageBox.Show("Nie wpisano prawidłowo liczby", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
