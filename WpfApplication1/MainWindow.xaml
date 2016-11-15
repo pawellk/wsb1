@@ -1,0 +1,29 @@
+﻿<Window x:Class="Kalkulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="kalkulator" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="529.218" Width="318.16" MinWidth="265" MinHeight="260" MaxWidth="265" MaxHeight="260">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="144*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Height="24" Name="pasekWyniku" VerticalAlignment="Top" TextChanged="pasekWyniku_TextChanged"  HorizontalContentAlignment="Right" Margin="44,3,37.4,0" Grid.ColumnSpan="3" />
+        <Button Content="0" Height="40" Margin="44,170,0,0" Name="liczba0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="liczba_Click" Grid.ColumnSpan="2" />
+        <Button Content="1" Height="40" Margin="44,124,0,0" Name="liczba1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="liczba_Click" Grid.ColumnSpan="2" />
+        <Button Content="2" Height="40" Margin="21.6,124,0,0" Name="liczba2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="liczba_Click" Grid.Column="2"  />
+        <Button Content="3" Height="40" Margin="14.185,124,0,0" Name="liczba3" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="liczba_Click" Grid.ColumnSpan="2" Grid.Column="1"  />
+        <Button Content="4" Height="40" Margin="44,78,0,0" Name="liczba4" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="liczba_Click" Grid.ColumnSpan="2" />
+        <Button Content="5" Height="40" Margin="21.6,78,0,0" Name="liczba5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="liczba_Click" Grid.Column="2"  />
+        <Button Content="6" Height="40" Margin="14.185,78,0,0" Name="liczba6" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="liczba_Click" Grid.ColumnSpan="2" Grid.Column="1"  />
+        <Button Content="7" Height="40" Margin="44,32,0,0" Name="liczba7" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="liczba_Click" Grid.ColumnSpan="2" />
+        <Button Content="8" Height="40" Margin="22.6,33,0,0" Name="liczba8" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="liczba_Click" Grid.Column="2"  />
+        <Button Content="9" Height="40" Margin="14.185,32,0,0" Name="liczba9" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="liczba_Click" Grid.ColumnSpan="2" Grid.Column="1"  />
+        <Button Content="=" Height="40" Margin="21.6,170,0,0" Name="wynik" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="wynik_Click" Grid.Column="2"  />
+        <Button Content="*" Height="40" Margin="66.6,78,0,0" Name="mnożenie" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="działanie_Click" Grid.Column="2"  />
+        <Button Content="/" Height="40" Margin="67.6,33,0,0" Name="dzielenie" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="działanie_Click" Grid.Column="2" />
+        <Button Content="+" Height="40" Margin="66.6,170,0,0" Name="dodawanie" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="działanie_Click" Grid.Column="2"  />
+        <Button Content="-" Height="40" Margin="66.6,124,0,0" Name="odejmowanie" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" Click="działanie_Click" Grid.Column="2"  />
+        <Button Content="C" Height="40" HorizontalAlignment="Left" Margin="13.185,170,0,0" Name="czyszczenie" VerticalAlignment="Top" Width="40" Click="czyszczenie_Click" Grid.ColumnSpan="2" Grid.Column="1"  />
+    </Grid>
+</Window>
